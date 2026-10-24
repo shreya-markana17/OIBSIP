@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard | Authora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="dashboard-page">
+      <header class="dashboard-header">
+        <div class="dashboard-brand">
+          <span class="brand-mark">A</span>
+
+          <div>
+            <p class="brand-name">AUTHORA</p>
+            <span class="brand-subtitle"> PERSONAL SPACE </span>
+          </div>
+        </div>
+
+        <button type="button" id="logoutBtn" class="logout-button">
+          Logout
+          <span>↗</span>
+        </button>
+      </header>
+
+      <section class="dashboard-hero">
+        <div>
+          <p class="dashboard-eyebrow">PRIVATE DASHBOARD</p>
+
+          <h1>
+            Welcome,
+            <em id="dashboardUsername">User</em>.
+          </h1>
+
+          <p class="dashboard-description">
+            You're successfully signed in. This protected space is available
+            only while your session is active.
+          </p>
+        </div>
+
+        <div class="status-card">
+          <span class="status-dot"></span>
+
+          <div>
+            <span class="status-label"> ACCOUNT STATUS </span>
+
+            <strong>Authenticated</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-content">
+        <div class="welcome-card">
+          <span class="card-number">01</span>
+
+          <div>
+            <p class="card-label">YOUR ACCOUNT</p>
+
+            <h2 id="dashboardEmail">user@example.com</h2>
+
+            <p>
+              Your account is protected by client-side authentication and a
+              hashed password.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <span class="card-number">02</span>
+
+            <p class="card-label">SESSION</p>
+
+            <h3>Active</h3>
+
+            <p>Your login session is currently active.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">03</span>
+
+            <p class="card-label">SECURITY</p>
+
+            <h3>SHA-256</h3>
+
+            <p>Passwords are stored as hashed values, not plain text.</p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-number">04</span>
+
+            <p class="card-label">ACCESS</p>
+
+            <h3>Protected</h3>
+
+            <p>This page requires an authenticated session.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="dashboard-footer">
+        <span>AUTHORA · 2026</span>
+
+        <span> SECURE ACCESS </span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

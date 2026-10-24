@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TaskFlow | To-Do App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">✓</span>
+
+          <div>
+            <p class="brand-name">TASKFLOW</p>
+            <span class="brand-subtitle">YOUR DAILY SPACE</span>
+          </div>
+        </div>
+
+        <div class="date-display" id="dateDisplay">
+          <!-- Date added by JavaScript -->
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">STAY ORGANIZED</p>
+
+          <h1>
+            Make space for
+            <em>what matters.</em>
+          </h1>
+
+          <p class="hero-text">
+            Capture your tasks, keep your focus, and turn small actions into
+            meaningful progress.
+          </p>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-top">
+            <span>YOUR PROGRESS</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+
+          <div class="progress-bar">
+            <span id="progressBar"></span>
+          </div>
+
+          <p id="progressText">No completed tasks yet</p>
+        </div>
+      </section>
+
+      <!-- Add Task -->
+      <section class="add-task-section">
+        <div class="input-wrapper">
+          <span class="input-icon">＋</span>
+
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What needs to be done?"
+            maxlength="120"
+            autocomplete="off"
+          />
+        </div>
+
+        <button id="addTaskBtn" class="add-btn">
+          Add Task
+          <span>↗</span>
+        </button>
+      </section>
+
+      <!-- Task Stats -->
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-icon pending-icon">○</div>
+
+          <div>
+            <span class="stat-label">PENDING</span>
+            <strong id="pendingCount">0</strong>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon completed-icon">✓</div>
+
+          <div>
+            <span class="stat-label">COMPLETED</span>
+            <strong id="completedCount">0</strong>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon total-icon">#</div>
+
+          <div>
+            <span class="stat-label">TOTAL TASKS</span>
+            <strong id="totalCount">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tasks -->
+      <section class="tasks-area">
+        <!-- Pending -->
+        <div class="task-column">
+          <div class="section-heading">
+            <div>
+              <span class="section-number">01</span>
+
+              <h2>Pending</h2>
+            </div>
+
+            <span class="task-badge" id="pendingBadge">0</span>
+          </div>
+
+          <div class="task-list" id="pendingTasks">
+            <div class="empty-state" id="pendingEmpty">
+              <div class="empty-icon">○</div>
+
+              <h3>Nothing pending</h3>
+
+              <p>Add a task above and start making progress.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Completed -->
+        <div class="task-column completed-column">
+          <div class="section-heading">
+            <div>
+              <span class="section-number">02</span>
+
+              <h2>Completed</h2>
+            </div>
+
+            <span class="task-badge completed-badge" id="completedBadge">
+              0
+            </span>
+          </div>
+
+          <div class="task-list" id="completedTasks">
+            <div class="empty-state" id="completedEmpty">
+              <div class="empty-icon">✓</div>
+
+              <h3>Your wins will appear here</h3>
+
+              <p>Complete a task and watch your progress grow.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <p>
+          TASKFLOW
+          <span>·</span>
+          SMALL STEPS. BIG PROGRESS.
+        </p>
+
+        <p>Your tasks are saved automatically.</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

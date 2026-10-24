@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Register | Authora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="auth-page">
+      <section class="auth-visual">
+        <div class="visual-content">
+          <span class="visual-label"> CREATE · CONNECT · CONTINUE </span>
+
+          <h1>
+            Start your
+            <em>own space.</em>
+          </h1>
+
+          <p>
+            Create your account and get access to your personal dashboard in
+            just a few steps.
+          </p>
+        </div>
+
+        <div class="visual-footer">
+          <span>AUTHORA</span>
+          <span>EST. 2026</span>
+        </div>
+      </section>
+
+      <section class="auth-form-section">
+        <div class="auth-form-container">
+          <div class="mobile-brand">
+            <span class="brand-mark">A</span>
+            <span>AUTHORA</span>
+          </div>
+
+          <div class="form-heading">
+            <p class="form-eyebrow">GET STARTED</p>
+
+            <h2>Create account</h2>
+
+            <p>Fill in your details to create your account.</p>
+          </div>
+
+          <form id="registerForm" novalidate>
+            <div class="form-group">
+              <label for="registerUsername"> Username </label>
+
+              <input
+                type="text"
+                id="registerUsername"
+                placeholder="Choose a username"
+                autocomplete="username"
+                maxlength="30"
+              />
+
+              <small class="field-error" id="registerUsernameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="registerEmail"> Email </label>
+
+              <input
+                type="email"
+                id="registerEmail"
+                placeholder="Enter your email"
+                autocomplete="email"
+              />
+
+              <small class="field-error" id="registerEmailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="registerPassword"> Password </label>
+
+              <input
+                type="password"
+                id="registerPassword"
+                placeholder="Minimum 8 characters"
+                autocomplete="new-password"
+              />
+
+              <small class="field-error" id="registerPasswordError"></small>
+            </div>
+
+            <div class="password-hint">
+              Password must contain at least 8 characters and 1 number.
+            </div>
+
+            <p class="form-message" id="registerMessage"></p>
+
+            <button type="submit" class="auth-button">
+              Create Account
+              <span>→</span>
+            </button>
+          </form>
+
+          <div class="form-footer">
+            <p>
+              Already have an account?
+              <a href="index.html"> Sign in </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
